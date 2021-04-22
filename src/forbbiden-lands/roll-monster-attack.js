@@ -58,7 +58,6 @@ async function monsterAttack() {
   if (!token.inCombat && game.combat) {
     await token.toggleCombat();
   } else if (!game.combat) {
-    game.tables.getName("Initiative").reset()
     await token.toggleCombat();
   }
 
