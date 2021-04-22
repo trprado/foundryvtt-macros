@@ -34,8 +34,6 @@ function getAttack(token) {
   });
   // select attack based on a number of attacks that exist in actor.
   let roll = new Roll(`1d${attacks.length}`).roll();
-  console.log(roll.result);
-  console.log(attacks[roll.result - 1]);
   const attack = attacks[roll.result - 1];
 
   return attack;
