@@ -48,6 +48,8 @@ function getAttack(token) {
  */
 async function monsterAttack() {
   const token = canvas.tokens.controlled[0];
+  if (!token)
+    return ui.notifications.error("Need select a token of a monster!")
 
   if (token.sheet.actor.data.type !== "monster") {
     return ui.notifications.error("Actor is not a Monster.")
